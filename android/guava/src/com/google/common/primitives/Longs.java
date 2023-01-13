@@ -378,7 +378,7 @@ public final class Longs {
    * <p>Note that strings prefixed with ASCII {@code '+'} are rejected, even under JDK 7, despite
    * the change to {@link Long#parseLong(String, int)} for that version.
    *
-   * @param string the string representation of an long value
+   * @param string the string representation of a long value
    * @param radix the radix to use when parsing
    * @return the long value represented by {@code string} using {@code radix}, or {@code null} if
    *     {@code string} has a length of zero or cannot be parsed as a long value
@@ -692,6 +692,8 @@ public final class Longs {
    * <p>The returned list maintains the values, but not the identities, of {@code Long} objects
    * written to or read from it. For example, whether {@code list.get(0) == list.get(0)} is true for
    * the returned list is unspecified.
+   *
+   * <p>The returned list is serializable.
    *
    * <p><b>Note:</b> when possible, you should represent your data as an {@link ImmutableLongArray}
    * instead, which has an {@link ImmutableLongArray#asList asList} view.

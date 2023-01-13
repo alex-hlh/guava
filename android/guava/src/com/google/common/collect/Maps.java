@@ -1423,7 +1423,7 @@ public final class Maps {
 
   /**
    * Returns an unmodifiable view of the specified map entry. The {@link Entry#setValue} operation
-   * throws an {@link UnsupportedOperationException}. This also has the side-effect of redefining
+   * throws an {@link UnsupportedOperationException}. This also has the side effect of redefining
    * {@code equals} to comply with the Entry contract, to avoid a possible nefarious implementation
    * of equals.
    *
@@ -1993,6 +1993,7 @@ public final class Maps {
      * @throws NullPointerException if the key or value is null and this transformer does not accept
      *     null arguments
      */
+    @ParametricNullness
     V2 transformEntry(@ParametricNullness K key, @ParametricNullness V1 value);
   }
 
